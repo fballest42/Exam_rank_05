@@ -17,6 +17,10 @@ class Warlock{
         std::string const &getName(void) const;
         std::string const &getTitle(void) const;
         //Setters
-        void setTitle(const std::string newTitle);
+        void setTitle(const std::string &newTitle);
         void introduce() const;
+
+        void learnSpell(ASpell *spell);
+        void forgetSpell(std::string spell);
+        void lanchSpell(std::string spell, ATarget &target);
 };

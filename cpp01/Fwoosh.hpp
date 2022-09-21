@@ -1,6 +1,6 @@
 #pragma once
 
-#include<ASpell>
+#includeº"ASpell.hpp"
 
 class Fwoosh: public ASpell
 {

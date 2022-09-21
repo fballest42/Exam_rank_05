@@ -32,3 +32,20 @@ void Warlock::introduce() const
 {
     std::cout << this->name << ": I am " << this->name << ", " << this->title << "!" << std::endl;
 }
+
+void Warlock::learnSpell(ASpell *spell)
+{
+    if (spell)
+    arr.insert(std::pair<std::string, ASpell *>(spell->getName(), spell));
+}
+
+void Warlock::forgetSpell(std::string spell)
+{
+    arr.erase(spell);
+}
+
+void Warlock::lanchSpell(std::string spell, ATarget &target)
+{
+    if (arr.find(spell) != arr.end())
+        arr[spell]->launch(target);
+}

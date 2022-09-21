@@ -13,7 +13,7 @@ ASpell::ASpell(const ASpell &copy)
     *this = copy;
 }
 
-ASpell &ASpell::operator=(const ASpell &equal);
+ASpell &ASpell::operator=(const ASpell &equal)
 {
     this->name = equal.name;
     this->effects = equal.effects;
