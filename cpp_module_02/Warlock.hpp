@@ -1,34 +1,50 @@
-#pragma once
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Warlock.hpp                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ncolomer <ncolomer@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/01/16 20:37:27 by ncolomer          #+#    #+#             */
+/*   Updated: 2020/02/04 13:00:44 by ncolomer         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include <iostream>
-#include "ATarget.hpp"
-#include "ASpell.hpp"
-#include "SpellBook.hpp"
-#include "Fireball.hpp"
-#include "Polymorph.hpp"
-#include "BrickWall.hpp"
+#ifndef WARLOCK_HPP
+# define WARLOCK_HPP
+
+# include <iostream>
+# include <string>
+# include <vector>
+# include "ASpell.hpp"
+# include "ATarget.hpp"
+# include "SpellBook.hpp"
 
 class Warlock
 {
-	private:
-		std::string name;
-		std::string title;
+private:
+	std::string name;
+	std::string title;
+	SpellBook spellBook;
 
-		Warlock();
-		Warlock(Warlock const &rhs);
-		Warlock &operator=(Warlock const &rhs);
+	Warlock();
+	Warlock(Warlock const &other);
 
-		SpellBook spell;
-	public:
-		Warlock(std::string const &name, std::string const &title);
-		~Warlock();
-		std::string const &getName() const;
-		std::string const &getTitle() const;
+	Warlock &operator=(Warlock const &other);
+public:
+	Warlock(std::string const &name, std::string const &title);
+	virtual ~Warlock();
 
-		void setTitle(std::string const &title);
-		void introduce() const;
+	std::string const &getName(void) const;
+	std::string const &getTitle(void) const;
 
-		void learnSpell(ASpell *spell);
-		void forgetSpell(std::string name);
-		void launchSpell(std::string name, ATarget &target);
+	void setTitle(std::string const &title);
+
+	void introduce(void) const;
+
+	void learnSpell(ASpell *spell);
+	void forgetSpell(std::string const &spellName);
+	void launchSpell(std::string const &spellName, ATarget const &target);
 };
+
+#endif

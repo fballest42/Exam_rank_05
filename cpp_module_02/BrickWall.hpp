@@ -1,12 +1,27 @@
-#pragma once
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   BrickWall.hpp                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ncolomer <ncolomer@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/02/04 12:58:33 by ncolomer          #+#    #+#             */
+/*   Updated: 2020/02/04 12:59:02 by ncolomer         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include "ATarget.hpp"
+#ifndef BRICKWALL_HPP
+# define BRICKWALL_HPP
 
-class BrickWall : public ATarget
+# include "ATarget.hpp"
+
+class BrickWall: public ATarget
 {
-	public:
-		BrickWall();
-		~BrickWall();
+public:
+	BrickWall();
+	virtual ~BrickWall();
 
-		virtual ATarget* clone() const;
+	virtual ATarget *clone(void) const;
 };
+
+#endif
