@@ -9,7 +9,7 @@ class ATarget;
 
 class ASpell
 {
-    protected:
+    private:
         std::string name;
         std::string effects;
     public:
@@ -22,7 +22,7 @@ class ASpell
         std::string const &getName(void) const;
         std::string const &getEffects(void) const;
 
-        void    launch(Atarget const &target);
+        void    launch(ATarget const &target) const;
         virtual ASpell *clone(void) const = 0;
 };
 
