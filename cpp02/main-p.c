@@ -12,28 +12,26 @@ int ft_strlen(char const *str)
 
 int main ()
 {
-    float     characters = 24;
+    float   characters = 24;
     int     i = 0;
     FILE    *file;
-    void    *text;
+    char    *text;
 
     file = fopen("./kk.txt", "r+");
     if (!file)
         return 1;
     while (i < characters / 2)
     {
-        fprintf(file, "A\n")
+        fprintf(file, "A\n");
         i++;
     }
     printf("AHORA VAMOS A IMPRIMIR\n");
-    if ((i = fscanf(file, %s, &text)) < 0)
-    {
-        printf("%d", i);
+    if ((i = fscanf(file, "%s", text)) < 0)
         return 3;
-    }
     i = ft_strlen(text);
+    printf("%d\n", i);
     printf("TEXT TIENE %d CARACTERES\n", i);
-    printf("%s", (char *)text);
-    close(file);
+    printf("%s", text);
+    fclose(file);
     return 0;
 }
