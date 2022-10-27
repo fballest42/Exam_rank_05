@@ -1,5 +1,5 @@
 #ifndef FIREBALL_HPP
-# define FIREWALL_HPP
+# define FIREBALL_HPP
 
 # include "ASpell.hpp"
 

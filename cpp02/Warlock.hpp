@@ -6,13 +6,14 @@
 # include <vector>
 # include "ASpell.hpp"
 # include "ATarget.hpp"
+# include "SpellBook.hpp"
 
 class Warlock
 {
     private:
         std::string     name;
         std::string     title;
-        std::vector<ASpell*> spells;
+        SpellBook       spellBook;
         
         Warlock();
         Warlock(Warlock const &copy);
@@ -28,6 +29,7 @@ class Warlock
         void setTitle(std::string const &title);
 
         void introduce(void) const;
+
         void learnSpell(ASpell *spell);
         void forgetSpell(std::string const &spellName);
         void launchSpell(std::string const &spellName, ATarget const &target);
