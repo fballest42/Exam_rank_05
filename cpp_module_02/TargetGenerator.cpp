@@ -6,7 +6,7 @@
 /*   By: fballest <fballest@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/04 13:00:11 by ncolomer          #+#    #+#             */
-/*   Updated: 2022/10/26 11:41:58 by fballest         ###   ########.fr       */
+/*   Updated: 2022/10/27 12:40:52 by fballest         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,4 +50,3 @@ ATarget *TargetGenerator::createTarget(std::string const &name) {
 	}
 	return (nullptr);
 }
- 
