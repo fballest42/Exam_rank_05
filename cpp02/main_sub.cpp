@@ -25,7 +25,6 @@ int main()
   ATarget* wall = tarGen.createTarget("Inconspicuous Red-brick Wall");
 
   richard.introduce();
-  std::cout << "AQUI\n";
   richard.launchSpell("Polymorph", *wall);
   richard.launchSpell("Fireball", *wall);
 }
