@@ -1,16 +1,15 @@
-#include "SpellBook.hpp"
+#include"SpellBook.hpp"
 
 SpellBook::SpellBook() {}
-
 SpellBook::~SpellBook()
 {
     std::vector<ASpell*>::iterator ite = this->spells.end();
-    for (std::vector<ASpell*>::iterator it = this->spells.end(); it != ite; ++it)
+    for (std::vector<ASpell*>::iterator it = this->spells.begin(); it != ite; ++it)
         delete *it;
     this->spells.clear();
 }
 
-void SpellBook::learnSpell(ASpell *spell)
+void    SpellBook::learnSpell(ASpell *spell)
 {
     if (spell)
     {
@@ -22,7 +21,7 @@ void SpellBook::learnSpell(ASpell *spell)
     }
 }
 
-void SpellBook::forgetSpell(std::string const &spellName)
+void    SpellBook::forgetSpell(std::string const &spellName)
 {
     std::vector<ASpell*>::iterator ite = this->spells.end();
     for (std::vector<ASpell*>::iterator it = this->spells.begin(); it != ite; ++it)
@@ -35,11 +34,15 @@ void SpellBook::forgetSpell(std::string const &spellName)
     }
 }
 
-ASpell *SpellBook::generateSpell(std::string const &spellName)
+ASpell  *SpellBook::generateSpell(std::string const &spellName)
 {
     std::vector<ASpell*>::iterator ite = this->spells.end();
     for (std::vector<ASpell*>::iterator it = this->spells.begin(); it != ite; ++it)
+    {
         if ((*it)->getName() == spellName)
+        {
             return (*it);
+        }
+    }
     return (nullptr);
 }

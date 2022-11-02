@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cc                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ncolomer <ncolomer@student.42.fr>          +#+  +:+       +#+        */
+/*   By: fballest <fballest@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/17 00:35:12 by ncolomer          #+#    #+#             */
-/*   Updated: 2020/02/13 16:48:51 by ncolomer         ###   ########.fr       */
+/*   Updated: 2022/11/02 13:10:51 by fballest         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,11 +44,14 @@ int main(void)
 	tarGen.learnTargetType(earth);
 
 	std::cout << "--- Spells (all):\n";
-
+    std::cout << "0\n";
 	richard.launchSpell("Fwoosh", *tarGen.createTarget("Dummy Practice"));
+    std::cout << "1\n";
 	richard.launchSpell("Fireball", *tarGen.createTarget("BrickWall Practice"));
+    std::cout << "2\n";
 	richard.launchSpell("Polymorph", *tarGen.createTarget("Dummy Practice"));
-
+    std::cout << "3\n";
+        
 	std::cout << "--- Forgotten \"Fwoosh\":\n";
 
 	richard.forgetSpell("Fwoosh");
@@ -58,12 +61,14 @@ int main(void)
 
 	std::cout << "--- Spells (all):\n";
 
-	richard.learnSpell(air);
-	richard.launchSpell("Fwoosh", *tarGen.createTarget("Dummy Practice"));
-	richard.launchSpell("Fireball", *tarGen.createTarget("BrickWall Practice"));
-	richard.launchSpell("Polymorph", *tarGen.createTarget("Dummy Practice"));
 
-	std::cout << "--- Non-existant spell:\n";
+	richard.learnSpell(air);
+
+	richard.launchSpell("Fwoosh", *tarGen.createTarget("Dummy Practice"));
+    richard.launchSpell("Fireball", *tarGen.createTarget("BrickWall Practice"));
+    richard.launchSpell("Polymorph", *tarGen.createTarget("Dummy Practice"));
+	
+    std::cout << "--- Non-existant spell:\n";
 
 	richard.launchSpell("ACID", *tarGen.createTarget("BrickWall Practice"));
 	richard.forgetSpell("ACID");

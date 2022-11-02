@@ -7,16 +7,14 @@ ASpell &ASpell::operator=(ASpell const &copy)
 {
     this->name = copy.name;
     this->effects = copy.effects;
-    return (*this);
+    return *this;
 }
 
 ASpell::~ASpell() {}
 
-std::string const &ASpell::getName(void) const { return this->name; }
-std::string const &ASpell::getEffects(void) const { return this->effects; }
-
-void    ASpell::launch(ATarget const &target)
+std::string const &ASpell::getName(void) const {return this->name;}
+std::string const &ASpell::getEffects(void) const {return this->effects;}
+void ASpell::launch(ATarget const &target)
 {
     target.getHitBySpell(*this);
 }
-

@@ -10,4 +10,5 @@ class Polymorph: public ASpell
         virtual ~Polymorph();
         virtual ASpell *clone(void) const;
 };
+
 #endif

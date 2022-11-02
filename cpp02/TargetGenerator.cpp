@@ -1,16 +1,15 @@
-#include "TargetGenerator.hpp"
+#include"TargetGenerator.hpp"
 
 TargetGenerator::TargetGenerator() {}
-
 TargetGenerator::~TargetGenerator()
 {
     std::vector<ATarget*>::iterator ite = this->types.end();
-    for (std::vector<ATarget*>::iterator it =this->types.begin(); it != ite; ++it)
-        delete *it;
+    for (std::vector<ATarget*>::iterator it = this->types.begin(); it != ite; ++it)
+        delete (*it);
     this->types.clear();
 }
 
-void TargetGenerator::learnTargetType(ATarget *type)
+void    TargetGenerator::learnTargetType(ATarget *type)
 {
     if (type)
     {
@@ -34,16 +33,16 @@ void TargetGenerator::forgetTargetType(std::string const &name)
             delete *it;
             it = this->types.erase(it);
         }
-    }
+    } 
 }
 
 ATarget *TargetGenerator::createTarget(std::string const &name)
 {
     std::vector<ATarget*>::iterator ite = this->types.end();
-    for (std::vector<ATarget*>::iterator it = this->types.begin(); it != ite ; ++it)
+    for (std::vector<ATarget*>::iterator it = this->types.begin(); it != ite; ++it)
     {
         if ((*it)->getType() == name)
-            return (*it);
+            return *it;
     }
     return (nullptr);
 }

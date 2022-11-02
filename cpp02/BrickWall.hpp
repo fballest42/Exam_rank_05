@@ -5,10 +5,11 @@
 
 class BrickWall: public ATarget
 {
-    public:
-        BrickWall();
-        virtual ~BrickWall();
-        virtual ATarget *clone(void) const;
+public:
+	BrickWall();
+	virtual ~BrickWall();
+
+	virtual ATarget *clone(void) const;
 };
 
 #endif

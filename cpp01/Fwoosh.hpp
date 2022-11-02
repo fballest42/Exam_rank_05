@@ -8,7 +8,6 @@ class Fwoosh: public ASpell
     public:
         Fwoosh();
         ~Fwoosh();
-
         virtual ASpell *clone(void) const;
 };
 
