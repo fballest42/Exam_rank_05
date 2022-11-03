@@ -1,14 +1,14 @@
-#ifndef FIREBALL_HPP
-# define FIREBALL_HPP
+#ifndef DUMMY_HPP
+# define DUMMY_HPP
 
-# include "ASpell.hpp"
+# include "ATarget.hpp"
 
-class Fireball: public ASpell
+class Dummy: public ATarget
 {
     public:
-        Fireball();
-        virtual ~Fireball();
-        virtual ASpell *clone(void) const;
+        Dummy();
+        virtual ~Dummy();
+        virtual Dummy *clone(void) const;
 };
 
 #endif

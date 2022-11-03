@@ -9,7 +9,7 @@ class ASpell;
 
 class ATarget
 {
-    private:
+    protected:
         std::string     type;
 
     public:
@@ -18,7 +18,6 @@ class ATarget
         ATarget(ATarget const &copy);
         ATarget &operator=(ATarget const &copy);
         virtual ~ATarget();
-
         std::string const &getType(void) const;
         virtual ATarget *clone(void) const = 0;
         void getHitBySpell(ASpell const &spell) const;

@@ -2,7 +2,7 @@
 
 Fwoosh::Fwoosh(): ASpell("Fwoosh", "fwooshed") {}
 Fwoosh::~Fwoosh() {}
-ASpell *Fwoosh::clone(void) const
+Fwoosh *Fwoosh::clone(void) const
 {
     return (new Fwoosh(*this));
 }
