@@ -1,8 +1,8 @@
-#include"Dummy.hpp"
+#include"Fireball.hpp"
 
-Dummy::Dummy(): ATarget("Target Practice Dummy") {}
-Dummy::~Dummy() {}
-Dummy *Dummy::clone(void) const
+Fireball::Fireball(): ASpell("Fireball", "burnt to a crisp") {}
+Fireball::~Fireball() {}
+ASpell *Fireball::clone(void) const
 {
-    return (new Dummy(*this));
+	return (new Fireball(*this));
 }

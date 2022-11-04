@@ -2,7 +2,7 @@
 
 Dummy::Dummy(): ATarget("Target Practice Dummy") {}
 Dummy::~Dummy() {}
-Dummy *Dummy::clone(void) const
+ATarget *Dummy::clone(void) const
 {
-    return (new Dummy(*this));
+	return (new Dummy(*this));
 }

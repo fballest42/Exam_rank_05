@@ -1,8 +1,8 @@
-#include"Fwoosh.hpp"
+#include"Polymorph.hpp"
 
-Fwoosh::Fwoosh(): ASpell("Fwoosh", "fwooshed") {}
-Fwoosh::~Fwoosh() {}
-Fwoosh *Fwoosh::clone(void) const
+Polymorph::Polymorph(): ASpell("Polymorph", "turned into a critter") {}
+Polymorph::~Polymorph() {}
+ASpell *Polymorph::clone(void) const
 {
-    return (new Fwoosh(*this));
+	return (new Polymorph(*this));
 }

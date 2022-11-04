@@ -7,8 +7,8 @@
 class Warlock
 {
 	private:
-		std::string		name;
-		std::string		title;
+		std::string name;
+		std::string title;
 		Warlock();
 		Warlock(Warlock const &copy);
 		Warlock &operator=(Warlock const &copy);
@@ -17,8 +17,9 @@ class Warlock
 		virtual ~Warlock();
 		std::string const &getName(void) const;
 		std::string const &getTitle(void) const;
-		void setTitle(std::string const &title);
+		void setTitle(std::string const &title);	
 		void introduce(void) const;
+
 };
 
 #endif

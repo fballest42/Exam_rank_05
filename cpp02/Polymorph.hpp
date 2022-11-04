@@ -1,14 +1,15 @@
-#ifndef FWOOSH_HPP
-# define FWOOSH_HPP
+#ifndef POLYMORPH_HPP
+# define POLYMORPH_HPP
 
-# include"ASpell.hpp"
+# include "ASpell.hpp"
 
-class Fwoosh: public ASpell
+class Polymorph: public ASpell
 {
-    public:
-        Fwoosh();
-        virtual ~Fwoosh();
-        virtual Fwoosh *clone(void) const;
+	public:
+		Polymorph();
+		virtual ~Polymorph();
+		virtual ASpell *clone(void) const;
 };
 
 #endif
+
