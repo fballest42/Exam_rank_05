@@ -3,16 +3,12 @@
 
 # include <iostream>
 # include <string>
-# include <vector>
-# include "ASpell.hpp"
-# include "ATarget.hpp"
 
 class Warlock
 {
 	private:
 		std::string	name;
 		std::string title;
-		std::vector<ASpell*>	spells;
 		Warlock();
 		Warlock(Warlock const &copy);
 		Warlock &operator=(Warlock const &copy);
@@ -22,10 +18,7 @@ class Warlock
 		std::string const &getName() const;
  		std::string const &getTitle() const;
 		void setTitle(std::string const &title);
-		void introduce() const;
-		void learnSpell(ASpell *spell);
-		void forgetSpell(std::string const &spell);
-		void launchSpell(std::string const &spell, ATarget const &target);		
+		void introduce() const;		
 };
 
 #endif
