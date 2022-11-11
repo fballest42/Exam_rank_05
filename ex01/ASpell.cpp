@@ -5,8 +5,8 @@ ASpell::ASpell(std::string const &name, std::string const &effects): name(name),
 ASpell::ASpell(ASpell const &copy): name(copy.name), effects(copy.effects) {}
 ASpell &ASpell::operator=(ASpell const &copy)
 {
-	this->name = copy.getName();
-	this->effects = copy.getEffects();
+	this->name = copy.name;
+	this->effects = copy.effects;
 	return (*this);
 }
 ASpell::~ASpell() {}
@@ -16,3 +16,5 @@ void ASpell::launch(ATarget const &target)
 {
 	target.getHitBySpell(*this);
 }
+
+
