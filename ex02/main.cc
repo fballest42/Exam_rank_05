@@ -6,7 +6,7 @@
 /*   By: fballest <fballest@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/17 00:35:12 by ncolomer          #+#    #+#             */
-/*   Updated: 2022/11/10 09:43:29 by fballest         ###   ########.fr       */
+/*   Updated: 2022/11/16 11:16:44 by fballest         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,14 +44,11 @@ int main(void)
 	tarGen.learnTargetType(earth);
 
 	std::cout << "--- Spells (all):\n";
-    std::cout << "0\n";
+
 	richard.launchSpell("Fwoosh", *tarGen.createTarget("Target Practice Dummy"));
-    std::cout << "1\n";
 	richard.launchSpell("Fireball", *tarGen.createTarget("Inconspicuous Red-brick Wall"));
-    std::cout << "2\n";
 	richard.launchSpell("Polymorph", *tarGen.createTarget("Target Practice Dummy"));
-    std::cout << "3\n";
-        
+
 	std::cout << "--- Forgotten \"Fwoosh\":\n";
 
 	richard.forgetSpell("Fwoosh");
@@ -61,16 +58,14 @@ int main(void)
 
 	std::cout << "--- Spells (all):\n";
 
-
 	richard.learnSpell(air);
-
 	richard.launchSpell("Fwoosh", *tarGen.createTarget("Target Practice Dummy"));
-    richard.launchSpell("Fireball", *tarGen.createTarget("Inconspicuous Red-brick Wall"));
-    richard.launchSpell("Polymorph", *tarGen.createTarget("Target Practice Dummy"));
-	
-    std::cout << "--- Non-existant spell:\n";
+	richard.launchSpell("Fireball", *tarGen.createTarget("Inconspicuous Red-brick Wall"));
+	richard.launchSpell("Polymorph", *tarGen.createTarget("Target Practice Dummy"));
 
-	richard.launchSpell("ACID", *tarGen.createTarget("BrickWall Practice"));
+	std::cout << "--- Non-existant spell:\n";
+
+	richard.launchSpell("ACID", *tarGen.createTarget("Inconspicuous Red-brick Wall"));
 	richard.forgetSpell("ACID");
 	richard.launchSpell("ACID", *tarGen.createTarget("Target Practice Dummy"));
 

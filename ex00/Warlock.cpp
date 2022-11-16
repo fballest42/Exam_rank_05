@@ -8,10 +8,9 @@ Warlock &Warlock::operator=(Warlock const &copy)
 	this->title = copy.title;
 	return (*this);
 }
-
-Warlock::Warlock(std::string const &name, std::string const &title): name(name), title(title)
+Warlock::Warlock(std::string const &name, std::string const &title): name(name), title(title) 
 {
-	std::cout << this->name << ": This looks like another boring day!\n";
+	std::cout << this->name << ": This looks like another boring day.\n";
 }
 Warlock::~Warlock()
 {
@@ -22,5 +21,6 @@ std::string const &Warlock::getTitle() const { return (this->title); }
 void Warlock::setTitle(std::string const &title) { this->title = title; }
 void Warlock::introduce() const
 {
-	std::cout << this->name << " I am " << this->name << ", " << this->title << "!\n";
+	std::cout << this->name << ": I am " << this->name << ", " << this->title << "!\n";
 }
+

@@ -13,12 +13,12 @@ class Warlock
 		Warlock(Warlock const &copy);
 		Warlock &operator=(Warlock const &copy);
 	public:
-		virtual ~Warlock();
 		Warlock(std::string const &name, std::string const &title);
+		virtual ~Warlock();
 		std::string const &getName() const;
 		std::string const &getTitle() const;
-		void setTitle(std::string const &title);
-		void introduce() const;
+		void setTitle(std::string const &name);
+		void introduce() const;	
 };
 
 #endif
