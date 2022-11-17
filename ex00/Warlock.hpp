@@ -17,8 +17,8 @@ class Warlock
 		virtual ~Warlock();
 		std::string const &getName() const;
 		std::string const &getTitle() const;
-		void setTitle(std::string const &name);
-		void introduce() const;	
+		void setTitle(std::string const &title);
+		void introduce() const;
 };
 
 #endif

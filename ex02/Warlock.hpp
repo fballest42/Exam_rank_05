@@ -3,7 +3,7 @@
 
 # include <iostream>
 # include <string>
-# include <vector>
+# include "SpellBook.hpp"
 # include "ASpell.hpp"
 # include "ATarget.hpp"
 
@@ -12,7 +12,7 @@ class Warlock
 	private:
 		std::string name;
 		std::string title;
-		std::vector<ASpell*> spells;
+		SpellBook  spellbook;
 		Warlock();
 		Warlock(Warlock const &copy);
 		Warlock &operator=(Warlock const &copy);
